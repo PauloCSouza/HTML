@@ -1,0 +1,267 @@
+@charset "UTF-8";
+
+/* Importando Fonte Personalizada no Google Fonts */
+@import url(http://fonts.googleapis.com/css?family=Orbitron);
+@import url(http://fonts.googleapis.com/css?family=Economica);
+
+
+/* ------------- CAROUSEL ------------- */
+.carousel{
+    background: #2f4357;
+    margin-top: 20px;
+}
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+}
+.bs-example{
+    margin: -30px -10px 0px -10px;
+}
+
+
+/* ------------- CORPO ------------- */
+body{
+    font-family: Arial, sans-serif;
+    background-color: #0094e1;
+}
+
+div#interface{
+    width: auto;
+    background-color: #ffffff;
+    margin: -20px auto auto auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+    padding: 10px;
+}
+
+p{
+    text-align: justify;
+    text-indent: 50px;
+}
+
+a{
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+h2{
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+/* ------------- Formatação Cabeçalho ------------- */
+header#cabecalho{
+    /*border-bottom: 1px #606060 solid;*/ /* BORDA DO MENU */
+    background-color: #fbfbfb;
+    margin: 0px -10px 0px -10px;
+    height: 180px;
+}
+
+header#cabecalho h1{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgb(14, 19, 75);
+    pading: auto; /* valor 0 */
+    margin: 10px 10px 10px 10px;
+}
+
+
+/* ------------- Formatação do Menu ------------- */
+nav#menu{
+    display: block;
+    background-color: rgb(65, 138, 255);
+    position: relative;
+    top: 55px;
+}
+
+nav#menu ul{
+    list-style: none;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 10%; /* anteriormente estava apenas left sem o margin causando um grande espaço desnecessario na página */
+}
+
+nav#menu li{
+    display: inline-block;
+    background-color: rgb(65, 138, 255);
+    padding: 15px;
+    margin: -2px;
+    transition: background-color 1s;
+}
+
+nav#menu li:hover{
+    background-color: #0072bc;
+}
+
+nav#menu h1{
+    display: none;
+}
+
+nav#menu a{
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+nav#menu a:hover{
+    color:#ffffff;
+}
+
+
+/* ------------- Formatação Corpo da Página ------------- */
+section#corpo {
+    /*border-right: 1px solid #606060;*/ /* BORDA DO CENTRO */
+    padding-right: 12px;
+}
+
+section#corpo h2{
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+/* ------------- Formatação do Article ------------- */
+article#noticia-principal h2{
+    font-size: 12pt;
+    color: #606060;
+    background: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+header#cabecalho-artigo h2{
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+header#cabecalho-artigo h3{
+    font-size: 12px;
+    color: #606060;
+}
+
+.direita {
+    text-align: right;
+}
+
+
+/* ------------- Formatação da Tabela ------------- */
+table#tabelaspec{
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#tabelaspec td{
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table#tabelaspec td.ce{
+    color: #ffffff;
+    background-color: #606060;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+table#tabelaspec td.cd{
+    color: #ffffff;
+    background-color: #cecece;
+}
+
+table#tabelaspec caption{
+    color: #888888;
+    font-size: 12pt;
+    font-width: bolder;
+}
+
+table#tabelaspec caption span {
+    display: block;
+    float: right;
+    color: #000000;
+    font-size: 9pt;
+    margin-top: 10px;
+}
+
+
+/* ------------- Formatação img Legenda ------------- */
+figure.foto-legenda{
+    position: relative;
+    border: 10px solid white;
+    box-shadow: 1px 1px 4px  black;
+    width: 25%;
+    height: 25%;
+    margin-left: 50px;
+}
+
+figure.foto-legenda img{
+    width: 100%;
+    height: 100%;
+    padding: 5px 0px 0px 0px;
+}
+
+figure.foto-legenda figcaption{
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 1.5s;
+}
+
+figure.foto-legenda:hover figcaption{
+    opacity: 1;
+}
+
+
+/* ------------- Formatação Rodapé ------------- */
+footer#rodape{
+    clear: both;
+    border-top: 1px solid #606060;
+    background-color: #0094e1;
+    margin: 0px -10px -20px -10px;
+}
+
+footer#rodape h4 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgb(14, 19, 75);
+    text-align: center;
+}
+
+footer#rodape h5 {
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgb(14, 19, 75);
+    text-align: center;
+}
+
+footer#rodape p{
+    text-align:center;
+}
+
+footer#rodape img{
+    max-width: 40px;
+
+}
+
+footer#rodape .logocenter{
+    text-align:center;
+}
