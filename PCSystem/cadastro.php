@@ -4,7 +4,6 @@ include '_php/conexao.php';
 
 ?>
 
-
 <!doctype html>
 
 <html lang="pt-br">
@@ -27,9 +26,9 @@ include '_php/conexao.php';
 
     <title> PCSystem </title>
 
-    <link rel="stylesheet" href="_css/cadastro.css"/>
+    <!--<link rel="stylesheet" href="_css/cadastro.css"/>-->
 
-    <script language="JavaScript" src="_javascript/funcoes.js"> </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 </head>
 
@@ -39,96 +38,223 @@ include '_php/conexao.php';
 
 ?>
 
-<fieldset>
+    <fieldset>
 
-    <legend>Novo Usuário</legend>
+        <!-- <form onsubmit="confirmInputCadastro()" class="form-horizontal" name="frm_cadastro" method="POST" action="painel.php"> -->
+        <form class="form-horizontal" name="frm_cadastro">
 
-    <form name="frm_cadastro" method="POST" action="painel.php">
+            <div class="container-fluid">
 
-        <h3>Cadastre-se utilizando Facebook</h3>
+                <p class="bg-success text-center">DADOS PESSOAIS <span class="glyphicon glyphicon-user" aria-hidden="true"></span></p>
 
-        <img src="_images/facebook.png" alt="imagem windows 10"/>
+            </div>
 
-        <h2>Dados Pessoais</h2>
+            <div class="form-group">
 
-        <label for="nome">Nome completo</label>
-        <input type="text" name="txtNome" id="nome" placeholder="Nome Completo">
+                <label for="nome" class="col-sm-5 control-label">NOME</label>
 
-        <br/>
+                <div class="col-sm-4">
 
-        <label for="sexo">Sexo</label>
-        <input type="radio" name="tSexo" id="cMasc"/> <label for="cMasc">Masculino</label>
-        <input type="radio" name="tSexo" id="cFem"/> <label for="cFem">Feminino</label>
+                    <input type="text" class="form-control" name="txtNome" id="nome" placeholder="Nome Completo" required>
 
-        <br/>
+                </div>
+            
+            </div>
 
-        <label for="nasc">Data de nascimento</label>
-        <input type="date" name="txtNasc" id="nasc" placeholder="dd/mm/aaaa">
+            <div class="form-group">
 
-        <br/>
+                <label for="sexo" class="col-sm-5 control-label">SEXO</label>
 
-        <h2>Endereço</h2>
+                <div class="col-sm-4">
 
-        <label for="cep">Cep</label>
-        <input type="text" name="txtCep" id="cep" placeholder="00000-000">
+                    <input type="radio" name="tSexo" id="cMasc" value="M" /> <label for="cMasc">Masculino</label>
+                    <input type="radio" name="tSexo" id="cFem" value="F" /> <label for="cFem">Feminino</label>
 
-        <br/>
+                </div>
 
-        <label for="cep">Cidade</label>
-        <input type="text" name="txtCep" id="cep">
+            </div>
 
-        <br/>
+            <div class="form-group">
 
-        <label for="cep">Estado</label>
-        <input type="text" name="txtCep" id="cep">
+                <label for="nasc" class="col-sm-5 control-label">DATA DE NASCIMENTO</label>
+                
+                <div class="col-sm-3">
 
-        <br/>
+                    <input type="date" class="form-control" name="txtNasc" id="nasc" placeholder="dd/mm/aaaa" required>
+            
+                </div>
 
-        <label for="cep">Endereço</label>
-        <input type="text" name="txtCep" id="cep">
+            </div>
 
-        <br/>
+            <div class="container-fluid">
 
-        <label for="cep">Numero</label>
-        <input type="text" name="txtCep" id="cep">
+                <p class="bg-info text-center">ENDEREÇO <span class="glyphicon glyphicon-home" aria-hidden="true"></span></p>
 
-        <br/>
+            </div>
 
-        <label for="cep">Complemento</label>
-        <input type="text" name="txtCep" id="cep">
+            <div class="form-group">
+            
+                <label for="cep" class="col-sm-5 control-label">CEP</label>
+            
+                <div class="col-sm-2">
 
-        <br/>
+                    <input type="text" class="form-control" name="txtCep" id="cep" placeholder="00000-000" required pattern="\d{5}-?\d{3}">
 
-        <label for="cep">Bairro</label>
-        <input type="text" name="txtCep" id="cep">
+                </div>
 
-        <h2>Telefones</h2>
+            </div>
 
-        <label for="tell">Residencial</label>
-        <input type="text" name="txtTell" id="tell">
+            <div class="form-group">
 
-        <br/>
+                <label for="cid" class="col-sm-5 control-label">CIDADE</label>
 
-        <label for="cell">Celular</label>
-        <input type="text" name="txtCell" id="cell">
+                <div class="col-sm-3">
 
-        <h2>Dados de indentificação</h2>
+                    <input type="text" class="form-control" name="txtCidade" id="cid" placeholder="São Paulo" required>
 
-        <label for="email">E-mail</label>
-        <input type="email" name="txtEmail" id="email" placeholder="nome@dominio.com">
+                </div>    
 
-        <br/>
+            </div>
 
-        <label for="senha">Senha</label>
-        <input type="password" name="txtSenha" id="senha">
+            <div class="form-group">
 
-        <br/><br/>
+                <label for="est" class="col-sm-5 control-label">ESTADO</label>
+            
+                    <div class="col-sm-3">
 
-        <input type="submit" value="Cadastrar"/>
+                        <input type="text" class="form-control" name="txtEstado" id="est" placeholder="São Paulo" required>
 
-    </form>
+                    </div>    
 
-</fieldset>
+            </div>
 
+            <div class="form-group">
+
+                <label for="end" class="col-sm-5 control-label">ENDEREÇO</label>
+            
+                <div class="col-sm-3">    
+
+                    <input type="text" class="form-control" name="txtEnd" id="end" required>
+
+                </div>    
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="num" class="col-sm-5 control-label">NÚMERO</label>
+                
+                <div class="col-sm-2">
+
+                    <input type="number" class="form-control" name="txtNum" id="num" required>
+
+                </div>    
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="bai" class="col-sm-5 control-label">BAIRRO</label>
+    
+                <div class="col-sm-3">
+
+                    <input type="text" class="form-control" name="txtBairro" id="bai" required>
+
+                </div>    
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="comp" class="col-sm-5 control-label">COMPLEMENTO</label>
+                
+                <div class="col-sm-3">
+
+                    <input type="text" class="form-control" name="txtComp" id="comp">
+
+                </div>
+
+            </div>
+
+            <div class="container-fluid">
+
+                <p class="bg-warning text-center">CONTATO <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></p>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="cas" class="col-sm-5 control-label">CASA</label>
+                    
+                <div class="col-sm-2">
+
+                    <input type="number" class="form-control" name="txtCasa" id="cas" placeholder="11 2222-3333" required>
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="cel" class="col-sm-5 control-label">CELULAR</label>
+                
+                <div class="col-sm-2">
+
+                    <input type="number" class="form-control" name="txtCelular" id="cel" placeholder="11 9 2222-3333" required>
+
+                </div>
+
+            </div>
+
+            <div class="container-fluid">
+
+                <p class="bg-danger text-center">IDENTIFICAÇÃO <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></p>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="email" class="col-sm-5 control-label">E-MAIL</label>
+                    
+                <div class="col-sm-3">
+
+                    <input type="email" class="form-control" name="txtEmail" id="email" placeholder="email@dominio.com " required>
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="senha" class="col-sm-5 control-label">SENHA</label>
+                
+                <div class="col-sm-3">
+
+                    <input type="password" class="form-control" name="txtSenha" id="senha" required>
+
+                </div>
+
+            </div>
+
+            <div class="container-fluid">
+
+                <div class="col-sm-6 control-label">
+
+                </div>
+
+                <div class="col-sm-2 control-label">
+
+                    <!-- <input type="submit" class="btn btn-primary btn-sm btn-block" id="btnCadastro" value="Cadastrar"/> -->
+                    <input type="button" id='teste' value="Cadastrar">
+                </div>
+
+            </div>
+
+        </form>
+
+    </fieldset>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   
 </body>
 </html>
